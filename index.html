@@ -5,8 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maze</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.min.js" integrity="sha512-pi0tSRZdlNRZeANPwdAIHRAYg6gZZV6QlAiyHXn5TYqLzBKE9jlttO/QgYLMhISD6oNv2kPsVelx+n5nw0FqKA==" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        h1 {
+            color: white;
+            font-size: 64px;
+            font-family: sans-serif;
+        }
+
+        .winner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
+    <div class="winner hidden">
+        <h1>You win!</h1>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

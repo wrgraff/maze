@@ -1,7 +1,7 @@
 const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
 const cellsHorizontal = 8;
-const cellsVertical = 5;
+const cellsVertical = 7;
 const width = window.innerWidth;
 const height = window.innerHeight;
 
@@ -219,6 +219,7 @@ Events.on(engine, 'collisionStart', evt => {
                     Body.setStatic(body, false);
                 }
             });
+            document.querySelector('.winner').classList.remove('hidden');
         }
     })
 });
